@@ -7,13 +7,20 @@
         "metadata": {
           "description": "Username for the Virtual Machine."
         },
-        "defaultValue": "azureuser"
+        "defaultValue": "developer"
       },
       "adminPassword": {
         "type": "securestring",
         "metadata": {
           "description": "Password for the Virtual Machine."
         }
+      },
+      "vmName": {
+        "type": "string",
+        "metadata": {
+          "description": "Name of the Virtual Machine."
+        },
+        "defaultValue": "lab"
       },
       "location": {
         "type": "string",
@@ -52,7 +59,7 @@
         "metadata": {
           "description": "The base URI where desired setup script is located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
         },
-        "defaultValue": "https://raw.githubusercontent.com/danielscholl/hol-win10/master/"
+        "defaultValue": "https://raw.githubusercontent.com/AdanOrtiz/Windows-10-Developer-Box/master/"
       },
       "script": {
         "type": "string",
@@ -63,14 +70,14 @@
       }
     },
     "variables": {
-      "nicName": "lab-nic",
+      "nicName": "[concat(variables('vmName'),'-nic')]",
       "addressPrefix": "192.168.1.0/24",
       "subnetName": "Subnet",
       "subnetPrefix": "192.168.1.0/24",
       "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-      "vmName": "lab",
-      "virtualNetworkName": "lab-vnet",
-      "publicIPAddressName": "lab-ip",
+      "vmName": "[parameters('vmName')]",
+      "virtualNetworkName": "[concat(variables('vmName'),'-vnet')]",
+      "publicIPAddressName": "[concat(variables('vmName'),'-ip')]",
       "dnsNameForPublicIP": "[uniqueString(resourceGroup().id)]",
       "scriptFolder": "."
     },
