@@ -20,7 +20,7 @@ ForEach ($PackageName in $Packages)
 { choco install $PackageName -y }
 
 # Add User to Docker Group
-Add-LocalGroupMember -Group "docker-users" -Member "azureuser"
+Add-LocalGroupMember -Group "docker-users" -Member "developer"
 
 # Install Azure PowerShell
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
@@ -46,7 +46,7 @@ Invoke-WebRequest https://github.com/microsoft/terminal/releases/download/v0.10.
 Invoke-WebRequest https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaPL.ttf -Outfile ~/CascadiaPL.ttf -UseBasicParsing
 
 # Bring down Desktop Shortcuts
-$zipDownload = "https://github.com/danielscholl/hol-win10/blob/master/shortcuts.zip?raw=true"
+$zipDownload = "https://github.com/AdanOrtiz/Windows-10-Developer-Box/blob/master/shortcuts.zip?raw=true"
 $downloadedFile = "D:\shortcuts.zip"
 $vmFolder = "C:\Users\Public\Desktop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
