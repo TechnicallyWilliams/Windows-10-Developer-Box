@@ -46,7 +46,7 @@ Invoke-WebRequest https://github.com/microsoft/terminal/releases/download/v0.10.
 Invoke-WebRequest https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaPL.ttf -Outfile ~/CascadiaPL.ttf -UseBasicParsing
 
 # Bring down Desktop Shortcuts
-$zipDownload = "https://github.com/AdanOrtiz/Windows-10-Developer-Box/blob/master/shortcuts.zip?raw=true"
+$zipDownload = "https://github.com/TechnicallyWilliams/Windows-10-Developer-Box/blob/master/shortcuts.zip?raw=true"
 $downloadedFile = "D:\shortcuts.zip"
 $vmFolder = "C:\Users\Public\Desktop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
