@@ -59,7 +59,7 @@
         "metadata": {
           "description": "The base URI where desired setup script is located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
         },
-        "defaultValue": "https://raw.githubusercontent.com/AdanOrtiz/Windows-10-Developer-Box/master/"
+        "defaultValue": "https://raw.githubusercontent.com/TechnicallyWilliams/Windows-10-Developer-Box/master/"
       },
       "script": {
         "type": "string",
