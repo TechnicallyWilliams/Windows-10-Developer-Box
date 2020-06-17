@@ -18,7 +18,7 @@ A Windows 10 Developer Machine to use for Software Development fully configured 
 __Create the Workstation:__ _(30 Minutes)_
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAdanOrtiz%2FWindows-10-Developer-Box%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FTechnicallyWilliams%2FWindows-10-Developer-Box%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -146,7 +146,7 @@ __Configure the Workstation:__ _(30 Minutes)_
     ```bash
     sudo apt update
     sudo apt install curl
-    curl https://raw.githubusercontent.com/AdanOrtiz/Windows-10-Developer-Box/master/setup.sh | sudo bash
+    curl https://raw.githubusercontent.com/TechnicallyWilliams/Windows-10-Developer-Box/master/setup.sh | sudo bash
     ```
 
   - Install terraform using tfenv
